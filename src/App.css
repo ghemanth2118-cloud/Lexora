@@ -1,0 +1,4 @@
+/* App-level scoped overrides */
+.app-layout {
+  position: relative;
+}

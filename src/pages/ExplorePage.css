@@ -1,0 +1,259 @@
+/* ── Explore Page ─────────────────────────────────────────────────────────── */
+.explore-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Hero ───────────────────────────────────────────────────────────────────── */
+.explore-hero {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 28px 32px;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.12) 0%, rgba(6, 182, 212, 0.08) 100%);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.explore-hero__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.35);
+}
+
+/* ── Search ─────────────────────────────────────────────────────────────────── */
+.explore-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.2s;
+}
+
+.explore-search:focus-within {
+  border-color: rgba(124, 58, 237, 0.5);
+}
+
+.explore-search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: var(--font-sans, inherit);
+}
+
+.explore-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* ── Section ────────────────────────────────────────────────────────────────── */
+.explore-section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.explore-section__title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.explore-badge {
+  margin-left: 4px;
+  font-size: 11px;
+  font-weight: 500;
+  background: rgba(124, 58, 237, 0.15);
+  color: #a78bfa;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+
+/* ── Topic Grid ─────────────────────────────────────────────────────────────── */
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.topic-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 16px 18px;
+  border: 1.5px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  color: var(--text-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.topic-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--topic-color, #7c3aed);
+  opacity: 0;
+  transition: opacity 0.2s;
+  border-radius: inherit;
+}
+
+.topic-pill:hover::before {
+  opacity: 0.08;
+}
+
+.topic-pill:hover {
+  border-color: var(--topic-color, rgba(124, 58, 237, 0.4));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.topic-pill__emoji {
+  font-size: 22px;
+}
+
+.topic-pill__label {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.topic-pill__ai {
+  font-size: 10px;
+  color: var(--topic-color, #06b6d4);
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-top: 2px;
+  opacity: 0.85;
+}
+
+/* ── Trending Posts Grid ────────────────────────────────────────────────────── */
+.explore-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.explore-post-card {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.explore-post-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.explore-post-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.explore-post-card__img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.explore-post-card__body {
+  padding: 2px 0;
+}
+
+.explore-post-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ── AI Invite Banner ───────────────────────────────────────────────────────── */
+.ai-invite-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 28px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(124, 58, 237, 0.08) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.ai-invite-banner__icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #06b6d4, #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .explore-page {
+    padding: 14px;
+    gap: 18px;
+  }
+
+  .explore-hero {
+    padding: 20px 18px;
+  }
+
+  .topic-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .explore-posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-invite-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* ── Spin ───────────────────────────────────────────────────────────────────── */
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
