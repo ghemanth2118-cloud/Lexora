@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0A0A0A;
+  --color-foreground: #FFFFFF;
+  --color-accent: #A855F7; /* Electric Purple */
+  --color-accent-foreground: #FFFFFF;
+  --color-muted: #1A1A1A;
+  --color-muted-foreground: #A1A1AA;
+}
+
+:root {
+  --background: #0A0A0A;
+  --foreground: #FFFFFF;
+  --accent: #A855F7;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.2);
+}
+
+.glow-purple-strong {
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
+}
+
